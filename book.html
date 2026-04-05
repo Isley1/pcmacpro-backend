@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Repair — FixHub Phone & Gadget Repair</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">Fix<span>Hub</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#devices">Devices</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#how-it-works">How it Works</a></li>
+    <li><a href="index.html#testimonials">Reviews</a></li>
+    <li><a href="book.html">Contact</a></li>
+  </ul>
+  <a href="book.html" class="nav-cta">Book a Repair →</a>
+  <button class="hamburger" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#devices" onclick="closeMobile()">Devices</a>
+  <a href="services.html" onclick="closeMobile()">Services</a>
+  <a href="index.html#how-it-works" onclick="closeMobile()">How it Works</a>
+  <a href="index.html#testimonials" onclick="closeMobile()">Reviews</a>
+  <a href="book.html" onclick="closeMobile()">Book a Repair</a>
+</div>
+
+<!-- BOOK A REPAIR -->
+<section id="book">
+  <div class="book-layout">
+    <div class="book-info">
+      <div class="section-head fade-up">
+        <div class="section-label">Book a Repair</div>
+        <h2>Get Your Device Fixed Today</h2>
+        <p>Fill out the form and we'll contact you within 30 minutes to confirm your booking and provide a free quote.</p>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">📍</div>
+        <div>
+          <h4>Visit Our Workshop</h4>
+          <p>15 Bode Thomas Street, Surulere, Lagos. Open Mon–Sat, 8am–7pm.</p>
+        </div>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">📞</div>
+        <div>
+          <h4>Call or WhatsApp</h4>
+          <p>+234 801 234 5678<br>+234 901 234 5678</p>
+        </div>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">✉️</div>
+        <div>
+          <h4>Email Us</h4>
+          <p>repairs@fixhub.com.ng<br>We reply within 1 hour during business hours.</p>
+        </div>
+      </div>
+      <div class="info-card fade-up">
+        <div class="info-icon">🚚</div>
+        <div>
+          <h4>Pickup & Delivery</h4>
+          <p>We offer free pickup and delivery for repairs above ₦15,000 within Lagos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="repair-form fade-up" id="repairFormCard">
+      <div id="formContent">
+        <div style="margin-bottom: 28px;">
+          <div class="section-label">Repair Request Form</div>
+          <p style="font-size: 14px; color: var(--muted); margin-top: 6px;">All fields marked * are required. Free diagnostic included.</p>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="e.g. Adaeze" id="fname" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="e.g. Okonkwo" id="lname" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+234 801 234 5678" id="phone" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@example.com" id="email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Device Type *</label>
+            <select id="deviceType" required>
+              <option value="">Select device type...</option>
+              <option>Smartphone</option>
+              <option>Laptop / MacBook</option>
+              <option>Tablet / iPad</option>
+              <option>Smartwatch</option>
+              <option>Audio Device</option>
+              <option>Gaming Device</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Device Brand & Model *</label>
+            <input type="text" placeholder="e.g. iPhone 14 Pro / Samsung S23" id="deviceModel" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Type of Repair Needed *</label>
+          <select id="repairType" required>
+            <option value="">Select repair type...</option>
+            <option>Screen Replacement</option>
+            <option>Battery Replacement</option>
+            <option>Water Damage Repair</option>
+            <option>Charging Port Repair</option>
+            <option>Camera Repair</option>
+            <option>Speaker / Microphone Repair</option>
+            <option>Data Recovery</option>
+            <option>Software / Virus Issue</option>
+            <option>Logic Board / Motherboard Repair</option>
+            <option>Not Sure — Need Diagnostic</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe the Issue *</label>
+          <textarea placeholder="Tell us what's happening with your device. The more detail you provide, the faster we can help..." id="issue" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Preferred Service Option</label>
+          <select id="serviceOption">
+            <option>Drop off at workshop</option>
+            <option>Request pickup from my location</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>How Did You Hear About Us?</label>
+          <select id="source">
+            <option value="">Select an option...</option>
+            <option>Google Search</option>
+            <option>Instagram</option>
+            <option>Facebook</option>
+            <option>Twitter / X</option>
+            <option>WhatsApp</option>
+            <option>Friend / Family Referral</option>
+            <option>Walk-in / Signage</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button class="submit-btn" onclick="submitForm()">Submit Repair Request →</button>
+        <p class="form-note">🔒 Your information is private and secure. We'll contact you within 30 minutes.</p>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✅</div>
+        <h3>Request Received!</h3>
+        <p>Thanks! We've received your repair request and will contact you on <strong id="successPhone" style="color:var(--orange)"></strong> within 30 minutes to confirm your booking and send you a free quote.</p>
+        <a href="#" onclick="resetForm()" style="display:inline-block; margin-top:24px; color:var(--orange); font-size:14px; font-weight:600; text-decoration:none;">← Submit another request</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Fix<span>Hub</span></a>
+      <p>Lagos's most trusted phone and gadget repair specialists. Certified technicians, transparent pricing, same-day repairs.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Screen Replacement</a></li>
+        <li><a href="services.html">Battery Replacement</a></li>
+        <li><a href="services.html">Water Damage Repair</a></li>
+        <li><a href="services.html">Data Recovery</a></li>
+        <li><a href="services.html">Charging Port Fix</a></li>
+        <li><a href="services.html">Camera Repair</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Devices</h5>
+      <ul>
+        <li><a href="index.html#devices">iPhones & iOS</a></li>
+        <li><a href="index.html#devices">Android Phones</a></li>
+        <li><a href="index.html#devices">MacBooks</a></li>
+        <li><a href="index.html#devices">Windows Laptops</a></li>
+        <li><a href="index.html#devices">Tablets & iPads</a></li>
+        <li><a href="index.html#devices">Smartwatches</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍</span>
+        <span>72 Kudirat Abiola Way, Oregun, Ikeja</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span>+234 814 076 8033</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span>+234 705 644 1480</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">✉️</span>
+        <span>support@PCMAC.com.ng</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">🕐</span>
+        <span>Mon–Sat: 8am – 7pm</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 FixHub Nigeria. All rights reserved.</span>
+    <div class="social-links">
+      <a class="social-link" href="#" title="Instagram">ig</a>
+      <a class="social-link" href="#" title="Facebook">fb</a>
+      <a class="social-link" href="#" title="Twitter/X">𝕏</a>
+      <a class="social-link" href="#" title="WhatsApp">wa</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

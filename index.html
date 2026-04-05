@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCMAC Pro — Phone & Gadget Repair Experts</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="logo">PCMAC<span>Pro</span></a>
+  <ul class="nav-links">
+    <li><a href="#devices">Devices</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#how-it-works">How it Works</a></li>
+    <li><a href="book.html">Contact</a></li>
+  </ul>
+  <a href="book.html" class="nav-cta">Book a Repair →</a>
+  <button class="hamburger" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#devices" onclick="closeMobile()">Devices</a>
+  <a href="services.html" onclick="closeMobile()">Services</a>
+  <a href="#how-it-works" onclick="closeMobile()">How it Works</a>
+  <a href="book.html" onclick="closeMobile()">Book a Repair</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content fade-up visible">
+    <div class="hero-badge">Lagos's Trusted Repair Experts</div>
+    <h1>We Fix Your<br><span>Gadgets.</span><br>Fast.</h1>
+    <p class="hero-sub">
+      Cracked screen? Dead battery? Water damage? Our certified technicians repair phones, laptops, tablets and more — with transparent pricing and same-day turnaround.
+    </p>
+    <div class="hero-actions">
+      <a href="book.html" class="btn-primary">Book a Repair →</a>
+      <a href="#how-it-works" class="btn-secondary">How it Works</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-num">5,000+</span>
+        <div class="stat-label">Devices Repaired</div>
+      </div>
+      <div>
+        <span class="stat-num">98%</span>
+        <div class="stat-label">Customer Satisfaction</div>
+      </div>
+      <div>
+        <span class="stat-num">90min</span>
+        <div class="stat-label">Avg Repair Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track" id="ticker">
+    <span>Screen Repair</span>
+    <span>Battery Replacement</span>
+    <span>Water Damage Recovery</span>
+    <span>Charging Port Fix</span>
+    <span>Speaker Repair</span>
+    <span>Data Recovery</span>
+    <span>Software Troubleshooting</span>
+    <span>Camera Repair</span>
+    <span>Logic Board Repair</span>
+    <span>Screen Repair</span>
+    <span>Battery Replacement</span>
+    <span>Water Damage Recovery</span>
+    <span>Charging Port Fix</span>
+    <span>Speaker Repair</span>
+    <span>Data Recovery</span>
+    <span>Software Troubleshooting</span>
+    <span>Camera Repair</span>
+    <span>Logic Board Repair</span>
+  </div>
+</div>
+
+<!-- DEVICES WE REPAIR -->
+<section id="devices">
+  <div class="section-head fade-up">
+    <div class="section-label">What We Fix</div>
+    <h2>Every Device,<br>Every Problem</h2>
+    <p>From iPhones to Android phones, MacBooks to gaming tablets — our technicians are trained across all major brands and models.</p>
+  </div>
+  <div class="devices-grid">
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&q=80" alt="Smartphone on workbench" width="800" height="600" loading="eager"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80" alt="Modern smartphone" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=800&q=80" alt="Android phone" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80" alt="Phone repair tools" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80" alt="Smartphones collection" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Smartphones</h3>
+        <p>iPhone, Samsung, Tecno, Infinix, Xiaomi, OnePlus and more</p>
+      </div>
+    </div>
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80" alt="Laptop on desk" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80" alt="Laptop computer" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80" alt="MacBook" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80" alt="Laptop workspace" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Laptops</h3>
+        <p>MacBook, Dell, HP, Lenovo, Asus, Acer and all major brands</p>
+      </div>
+    </div>
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&q=80" alt="iPad" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&q=80" alt="Tablet device" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80" alt="Tablet in hands" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Tablets</h3>
+        <p>iPad, Samsung Galaxy Tab, Android tablets of all brands</p>
+      </div>
+    </div>
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&q=80" alt="Smartwatch" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800&q=80" alt="Apple Watch" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80" alt="Watch on wrist" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&q=80" alt="Wearable tech" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?w=800&q=80" alt="Fitness watch" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Smartwatches</h3>
+        <p>Apple Watch, Samsung Galaxy Watch, Fitbit and wearables</p>
+      </div>
+    </div>
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" alt="Headphones" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80" alt="Wireless earbuds" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80" alt="Over-ear headphones" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80" alt="Earbuds case" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80" alt="Audio gear" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Audio Devices</h3>
+        <p>AirPods, earphones, headphones, Bluetooth speakers</p>
+      </div>
+    </div>
+    <div class="device-card fade-up">
+      <div class="device-gallery" data-device-gallery>
+        <div class="device-gallery-viewport">
+          <div class="device-gallery-track">
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800&q=80" alt="Game controller" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80" alt="PlayStation controller" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&q=80" alt="Gaming setup" width="800" height="600" loading="lazy"></div>
+            <div class="device-gallery-slide"><img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&q=80" alt="Handheld gaming" width="800" height="600" loading="lazy"></div>
+          </div>
+        </div>
+        <button type="button" class="device-gallery-btn device-gallery-prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="device-gallery-btn device-gallery-next" aria-label="Next photo">›</button>
+        <div class="device-gallery-dots" aria-hidden="true"></div>
+      </div>
+      <div class="device-card-body">
+        <h3>Gaming Gear</h3>
+        <p>PlayStation, Xbox controllers, Nintendo Switch and handhelds</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-head fade-up" style="max-width: 100%; text-align: center; margin-left: auto; margin-right: auto;">
+    <div class="section-label">The Process</div>
+    <h2>Repaired in 4 Simple Steps</h2>
+    <p>We've made the repair process as easy as possible — from booking to pickup.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card fade-up">
+      <div class="step-num">Step 01</div>
+      <div class="step-icon-circle">📋</div>
+      <h3>Book Online</h3>
+      <p>Fill out our quick repair form with your device details and the issue. Takes less than 2 minutes.</p>
+    </div>
+    <div class="step-card fade-up">
+      <div class="step-num">Step 02</div>
+      <div class="step-icon-circle">🔍</div>
+      <h3>Free Diagnostic</h3>
+      <p>We run a full diagnostic and send you a clear, upfront quote before any work begins. No obligations.</p>
+    </div>
+    <div class="step-card fade-up">
+      <div class="step-num">Step 03</div>
+      <div class="step-icon-circle">⚙️</div>
+      <h3>Expert Repair</h3>
+      <p>Our certified technicians fix your device with quality parts, then test it thoroughly before finishing.</p>
+    </div>
+    <div class="step-card fade-up">
+      <div class="step-num">Step 04</div>
+      <div class="step-icon-circle">🚀</div>
+      <h3>Pickup or Delivery</h3>
+      <p>Collect from our Lagos workshop or request doorstep delivery. Most repairs done same day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="why-grid">
+    <div>
+      <div class="section-head fade-up" style="margin-bottom: 40px;">
+        <div class="section-label">Why Choose Us</div>
+        <h2>The FixHub<br>Difference</h2>
+        <p>We're not a generic repair shop — we're specialists who care about doing the job right, every single time.</p>
+      </div>
+      <div class="feature-list">
+        <div class="feature-item fade-up">
+          <div class="feature-dot"></div>
+          <div>
+            <h4>Certified Technicians</h4>
+            <p>Our engineers are trained and certified across all major device brands — Apple, Samsung, HP, Dell and more.</p>
+          </div>
+        </div>
+        <div class="feature-item fade-up">
+          <div class="feature-dot"></div>
+          <div>
+            <h4>No Fix, No Fee</h4>
+            <p>If we can't fix your device, you pay nothing. We only charge when the repair is successfully completed.</p>
+          </div>
+        </div>
+        <div class="feature-item fade-up">
+          <div class="feature-dot"></div>
+          <div>
+            <h4>Transparent Pricing</h4>
+            <p>You get a full quote before we touch your device. No hidden fees, no surprise charges at the end.</p>
+          </div>
+        </div>
+        <div class="feature-item fade-up">
+          <div class="feature-dot"></div>
+          <div>
+            <h4>Genuine & Premium Parts</h4>
+            <p>We use OEM and premium-grade parts sourced from certified suppliers — backed by a 90-day warranty.</p>
+          </div>
+        </div>
+        <div class="feature-item fade-up">
+          <div class="feature-dot"></div>
+          <div>
+            <h4>Same-Day Service</h4>
+            <p>Most common repairs like screen and battery replacements are completed within 60–90 minutes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-panel fade-up">
+      <div class="section-label" style="margin-bottom: 20px;">Our Commitments</div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Free diagnostic assessment for all devices</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Upfront quote before any work begins</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>No Fix = No Charge, guaranteed</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>90-day warranty on all replacement parts</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Certified and experienced repair technicians</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Same-day repairs on most common issues</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Doorstep pickup and delivery available</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Your data stays 100% private and secure</span>
+      </div>
+      <div class="trust-row">
+        <div class="trust-check">✓</div>
+        <span>Real-time repair status updates via WhatsApp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#hero" class="logo">PCMAC<span>Pro</span></a>
+      <p>Lagos's most trusted phone and gadget repair specialists. Certified technicians, transparent pricing, same-day repairs.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="services.html">Screen Replacement</a></li>
+        <li><a href="services.html">Battery Replacement</a></li>
+        <li><a href="services.html">Water Damage Repair</a></li>
+        <li><a href="services.html">Data Recovery</a></li>
+        <li><a href="services.html">Charging Port Fix</a></li>
+        <li><a href="services.html">Camera Repair</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Devices</h5>
+      <ul>
+        <li><a href="#devices">iPhones & iOS</a></li>
+        <li><a href="#devices">Android Phones</a></li>
+        <li><a href="#devices">MacBooks</a></li>
+        <li><a href="#devices">Windows Laptops</a></li>
+        <li><a href="#devices">Tablets & iPads</a></li>
+        <li><a href="#devices">Smartwatches</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍</span>
+        <span>72 Kudirat Abiola Way, Oregun, Ikeja</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span>+234 814 076 8033</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span>+234 705 644 1480</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">✉️</span>
+        <span>support@PCMAC.com.ng</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">🕐</span>
+        <span>Mon–Sat: 8am – 7pm</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PCMAC Pro. All rights reserved.</span>
+    <div class="social-links">
+      <a class="social-link" href="#" title="Instagram">ig</a>
+      <a class="social-link" href="#" title="Facebook">fb</a>
+      <a class="social-link" href="#" title="Twitter/X">𝕏</a>
+      <a class="social-link" href="#" title="WhatsApp">wa</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
