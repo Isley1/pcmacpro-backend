@@ -1,7 +1,7 @@
 {
-  "name": "fixhub-repair-form",
+  "name": "pcmac-pro-repair-form",
   "version": "1.0.0",
-  "description": "FixHub phone and gadget repair form backend",
+  "description": "PCMAC pro phone and gadget repair form backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -43,7 +43,7 @@
     submitBtn.textContent = 'Submitting...';
 
     // Send form data to backend
-    fetch('/submit-repair-request', {
+    fetch('http://localhost:3000/submit-repair-request', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -85,6 +85,68 @@
     document.getElementById('formContent').style.display = 'block';
     document.getElementById('formSuccess').style.display = 'none';
     ['fname','lname','phone','email','deviceType','deviceModel','repairType','issue'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+  }
+
+  // Contact form submission
+  function submitContactForm() {
+    const fname = document.getElementById('contact-fname').value.trim();
+    const lname = document.getElementById('contact-lname').value.trim();
+    const email = document.getElementById('contact-email').value.trim();
+    const phone = document.getElementById('contact-phone').value.trim();
+    const subject = document.getElementById('contact-subject').value;
+    const message = document.getElementById('contact-message').value.trim();
+
+    if (!fname || !lname || !email || !subject || !message) {
+      alert('Please fill in all required fields (marked with *).');
+      return;
+    }
+
+    // Disable submit button to prevent double submissions
+    const submitBtn = document.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    // Send form data to backend
+    fetch('http://localhost:3000/submit-contact-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        fname,
+        lname,
+        email,
+        phone,
+        subject,
+        message
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById('contactFormContent').style.display = 'none';
+        document.getElementById('contactFormSuccess').style.display = 'block';
+      } else {
+        alert('Error submitting form: ' + (data.message || 'Unknown error'));
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message →';
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error submitting form. Please check the server is running or try again later.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message →';
+    });
+  }
+
+  function resetContactForm() {
+    document.getElementById('contactFormContent').style.display = 'block';
+    document.getElementById('contactFormSuccess').style.display = 'none';
+    ['contact-fname','contact-lname','contact-email','contact-phone','contact-subject','contact-message'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.value = '';
     });

@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+require('dotenv').config(); // Load environment variables from .env file
 const config = require('./config');
 
 const app = express();
@@ -90,15 +91,15 @@ app.post('/submit-repair-request', async (req, res) => {
         <p><strong>Service Option:</strong> ${serviceOption || 'Not specified'}</p>
         
         <p>If you have any questions in the meantime, feel free to call us:</p>
-        <p>📞 +234 814 076 8033 or +234 705 644 1480</p>
+        <p>📞 08140768033 or 07056441480</p>
         
-        <p>Best regards,<br>FixHub Team</p>
+        <p>Best regards,<br>PCMAC pro Team</p>
       `;
 
       await transporter.sendMail({
         from: config.SENDER_EMAIL,
         to: email,
-        subject: 'Repair Request Confirmed - FixHub',
+        subject: 'Repair Request Confirmed - PCMAC pro',
         html: customerEmailContent
       });
     }
@@ -110,7 +111,8 @@ app.post('/submit-repair-request', async (req, res) => {
     });
 
   } catch (error) {
-    console.error('Error submitting repair request:', error);
+    console.error('Error submitting repair request:', error.message);
+    console.error('Full error:', error);
     res.status(500).json({ 
       success: false, 
       message: 'Error submitting repair request. Please try again later.',
@@ -119,8 +121,96 @@ app.post('/submit-repair-request', async (req, res) => {
   }
 });
 
+// Contact form submission endpoint
+app.post('/submit-contact-form', async (req, res) => {
+  try {
+    const { fname, lname, email, phone, subject, message } = req.body;
+
+    // Validate required fields
+    if (!fname || !lname || !email || !subject || !message) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Missing required fields' 
+      });
+    }
+
+    // Create email content
+    const emailContent = `
+      <h2>New Contact Message Received</h2>
+      <hr/>
+      <h3>Sender Information</h3>
+      <p><strong>Name:</strong> ${fname} ${lname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+      
+      <h3>Message Details</h3>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message.replace(/\n/g, '<br>')}</p>
+      
+      <hr/>
+      <p><em>Received at: ${new Date().toLocaleString()}</em></p>
+    `;
+
+    // Configure email transporter
+    const transporter = nodemailer.createTransport({
+      service: config.EMAIL_SERVICE,
+      auth: {
+        user: config.SENDER_EMAIL,
+        pass: config.SENDER_PASSWORD
+      }
+    });
+
+    // Send email to repair shop
+    await transporter.sendMail({
+      from: config.SENDER_EMAIL,
+      to: config.REPAIR_EMAIL,
+      subject: `New Contact Message - ${fname} ${lname}`,
+      html: emailContent
+    });
+
+    // Send confirmation email to customer
+    const customerEmailContent = `
+      <h2>We've Received Your Message!</h2>
+      <p>Hi ${fname},</p>
+      <p>Thank you for contacting us. We've received your message and will get back to you as soon as possible.</p>
+      
+      <h3>Your Message Summary:</h3>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong> ${message.substring(0, 100)}...</p>
+      
+      <p>If you need immediate assistance, feel free to call us:</p>
+      <p>📞 08140768033 or 07056441480</p>
+      
+      <p>Best regards,<br>PCMAC pro Team</p>
+    `;
+
+    await transporter.sendMail({
+      from: config.SENDER_EMAIL,
+      to: email,
+      subject: 'We Received Your Message - PCMAC pro',
+      html: customerEmailContent
+    });
+
+    res.json({ 
+      success: true, 
+      message: 'Contact message submitted successfully',
+      email: email
+    });
+
+  } catch (error) {
+    console.error('Error submitting contact form:', error.message);
+    console.error('Full error:', error);
+    res.status(500).json({ 
+      success: false, 
+      message: 'Error submitting contact form. Please try again later.',
+      error: error.message
+    });
+  }
+});
+
 // Start server
 app.listen(config.PORT, () => {
-  console.log(`FixHub Repair Form Server running on http://${config.HOST}:${config.PORT}`);
+  console.log(`PCMAC pro Repair Form Server running on http://${config.HOST}:${config.PORT}`);
   console.log(`Repair requests will be sent to: ${config.REPAIR_EMAIL}`);
 });

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book a Repair — PCMAC pro Phone & Gadget Repair</title>
+<title>Contact Us — PCMAC pro Phone & Gadget Repair</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -33,110 +33,116 @@
   <a href="contact.html" onclick="closeMobile()">Contact</a>
 </div>
 
-<!-- BOOK A REPAIR -->
-<section id="book">
-  <div class="book-layout-single" style="text-align: center;">
-    <div class="section-head fade-up" style="text-align: center; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;">
-      <div class="section-label">Book a Repair</div>
-      <h2>Get Your Device Fixed Today</h2>
-      <p>Fill out the form and we'll contact you within 30 minutes to confirm your booking and provide a free quote.</p>
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <div class="section-head fade-up">
+        <div class="section-label">Contact Us</div>
+        <h2>Get in Touch</h2>
+        <p>Have questions or need help? We're here for you. Reach out using any of the methods below.</p>
+      </div>
+
+      <div class="info-card fade-up">
+        <div class="info-icon">📍</div>
+        <div>
+          <h4>Visit Our Workshop</h4>
+          <p>72 Kudirat Abiola Way, Oregun, Ikeja<br>Open Mon–Sat, 8am–7pm</p>
+        </div>
+      </div>
+
+      <div class="info-card fade-up">
+        <div class="info-icon">📞</div>
+        <div>
+          <h4>Call or WhatsApp</h4>
+          <p>
+            <a href="tel:08140768033">08140768033</a><br>
+            <a href="tel:07056441480">07056441480</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card fade-up">
+        <div class="info-icon">✉️</div>
+        <div>
+          <h4>Email Us</h4>
+          <p>
+            <a href="mailto:crestapex0@gmail.com">crestapex0@gmail.com</a><br>
+            We reply within 1 hour during business hours.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-card fade-up">
+        <div class="info-icon">🚚</div>
+        <div>
+          <h4>Pickup & Delivery</h4>
+          <p>We offer free pickup and delivery for repairs above ₦15,000 within Lagos.</p>
+        </div>
+      </div>
+
+      <div class="info-card fade-up">
+        <div class="info-icon">⏰</div>
+        <div>
+          <h4>Business Hours</h4>
+          <p>
+            Monday – Saturday: 8am – 7pm<br>
+            Sunday: Closed<br>
+            We respond to emails 24/7
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="repair-form fade-up" id="repairFormCard" style="max-width: 600px; margin: 0 auto;">
-      <div id="formContent">
+
+    <div class="contact-form fade-up" id="contactFormCard">
+      <div id="contactFormContent">
         <div style="margin-bottom: 28px;">
-          <div class="section-label">Repair Request Form</div>
-          <p style="font-size: 14px; color: var(--muted); margin-top: 6px;">All fields marked * are required. Free diagnostic included.</p>
+          <div class="section-label">Send us a Message</div>
+          <p style="font-size: 14px; color: var(--muted); margin-top: 6px;">Fill out the form below and we'll get back to you soon.</p>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label>First Name *</label>
-            <input type="text" placeholder="e.g. Adaeze" id="fname" required>
+            <input type="text" placeholder="e.g. Adaeze" id="contact-fname" required>
           </div>
           <div class="form-group">
             <label>Last Name *</label>
-            <input type="text" placeholder="e.g. Okonkwo" id="lname" required>
+            <input type="text" placeholder="e.g. Okonkwo" id="contact-lname" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Phone Number *</label>
-            <input type="tel" placeholder="08140768033" id="phone" required>
+            <label>Email Address *</label>
+            <input type="email" placeholder="you@example.com" id="contact-email" required>
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="you@example.com" id="email">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Device Type *</label>
-            <select id="deviceType" required>
-              <option value="">Select device type...</option>
-              <option>Smartphone</option>
-              <option>Laptop / MacBook</option>
-              <option>Tablet / iPad</option>
-              <option>Smartwatch</option>
-              <option>Audio Device</option>
-              <option>Gaming Device</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Device Brand & Model *</label>
-            <input type="text" placeholder="e.g. iPhone 14 Pro / Samsung S23" id="deviceModel" required>
+            <label>Phone Number</label>
+            <input type="tel" placeholder="08140768033" id="contact-phone">
           </div>
         </div>
         <div class="form-group">
-          <label>Type of Repair Needed *</label>
-          <select id="repairType" required>
-            <option value="">Select repair type...</option>
-            <option>Screen Replacement</option>
-            <option>Battery Replacement</option>
-            <option>Water Damage Repair</option>
-            <option>Charging Port Repair</option>
-            <option>Camera Repair</option>
-            <option>Speaker / Microphone Repair</option>
-            <option>Data Recovery</option>
-            <option>Software / Virus Issue</option>
-            <option>Logic Board / Motherboard Repair</option>
-            <option>Not Sure — Need Diagnostic</option>
+          <label>Subject *</label>
+          <select id="contact-subject" required>
+            <option value="">Select a subject...</option>
+            <option>General Inquiry</option>
+            <option>Technical Support</option>
+            <option>Warranty Question</option>
+            <option>Feedback</option>
             <option>Other</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Describe the Issue *</label>
-          <textarea placeholder="Tell us what's happening with your device. The more detail you provide, the faster we can help..." id="issue" required></textarea>
+          <label>Message *</label>
+          <textarea placeholder="Tell us how we can help..." id="contact-message" required></textarea>
         </div>
-        <div class="form-group">
-          <label>Preferred Service Option</label>
-          <select id="serviceOption">
-            <option>Drop off at workshop</option>
-            <option>Request pickup from my location</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>How Did You Hear About Us?</label>
-          <select id="source">
-            <option value="">Select an option...</option>
-            <option>Google Search</option>
-            <option>Instagram</option>
-            <option>Facebook</option>
-            <option>Twitter / X</option>
-            <option>WhatsApp</option>
-            <option>Friend / Family Referral</option>
-            <option>Walk-in / Signage</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <button class="submit-btn" onclick="submitForm()">Submit Repair Request →</button>
-        <p class="form-note">🔒 Your information is private and secure. We'll contact you within 30 minutes.</p>
+        <button class="submit-btn" onclick="submitContactForm()">Send Message →</button>
+        <p class="form-note">🔒 Your information is private and secure.</p>
       </div>
-      <div class="form-success" id="formSuccess">
+      <div class="form-success" id="contactFormSuccess">
         <div class="success-icon">✅</div>
-        <h3>Request Received!</h3>
-        <p>Thanks! We've received your repair request and will contact you on <strong id="successPhone" style="color:var(--orange)"></strong> within 30 minutes to confirm your booking and send you a free quote.</p>
-        <a href="#" onclick="resetForm()" style="display:inline-block; margin-top:24px; color:var(--orange); font-size:14px; font-weight:600; text-decoration:none;">← Submit another request</a>
+        <h3>Message Received!</h3>
+        <p>Thanks for reaching out! We've received your message and will get back to you as soon as possible.</p>
+        <a href="#" onclick="resetContactForm()" style="display:inline-block; margin-top:24px; color:var(--orange); font-size:14px; font-weight:600; text-decoration:none;">← Send another message</a>
       </div>
     </div>
   </div>
