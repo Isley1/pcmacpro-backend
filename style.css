@@ -9,13 +9,13 @@
 :root {
     --orange: #FF6B1A;
     --orange-dim: #cc5210;
-    --dark: #0D0E11;
-    --dark2: #141519;
-    --dark3: #1C1D23;
-    --dark4: #242630;
-    --border: rgba(255, 255, 255, 0.08);
-    --text: #F0F0F2;
-    --muted: #8B8D98;
+    --dark: #FFFFFF;
+    --dark2: #F5F5F5;
+    --dark3: #EEEEEE;
+    --dark4: #E8E8E8;
+    --border: rgba(0, 0, 0, 0.08);
+    --text: #1A1A1A;
+    --muted: #666666;
     --font-head: 'Barlow Condensed', sans-serif;
     --font-body: 'DM Sans', sans-serif;
 }
@@ -59,7 +59,7 @@ nav {
     justify-content: space-between;
     padding: 0 5%;
     height: 70px;
-    background: rgba(13, 14, 17, 0.92);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     transition: background 0.3s;
