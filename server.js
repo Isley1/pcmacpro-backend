@@ -6,6 +6,29 @@ const config = require('./config');
 
 const app = express();
 
+// Helper function to create email transporter based on config
+function createTransporter() {
+  if (config.EMAIL_SERVICE === 'custom') {
+    return nodemailer.createTransport({
+      host: config.SMTP_HOST,
+      port: config.SMTP_PORT,
+      secure: config.SMTP_SECURE,
+      auth: {
+        user: config.SMTP_USER,
+        pass: config.SMTP_PASSWORD
+      }
+    });
+  } else {
+    return nodemailer.createTransport({
+      service: config.EMAIL_SERVICE,
+      auth: {
+        user: config.SENDER_EMAIL,
+        pass: config.SENDER_PASSWORD
+      }
+    });
+  }
+}
+
 // Middleware
 app.use(express.json());
 app.use(cors({
@@ -61,14 +84,8 @@ app.post('/submit-repair-request', async (req, res) => {
       <p><em>Received at: ${new Date().toLocaleString()}</em></p>
     `;
 
-    // Configure email transporter
-    const transporter = nodemailer.createTransport({
-      service: config.EMAIL_SERVICE,
-      auth: {
-        user: config.SENDER_EMAIL,
-        pass: config.SENDER_PASSWORD
-      }
-    });
+    // Create email transporter
+    const transporter = createTransporter();
 
     // Send email to repair shop
     await transporter.sendMail({
@@ -91,7 +108,7 @@ app.post('/submit-repair-request', async (req, res) => {
         <p><strong>Service Option:</strong> ${serviceOption || 'Not specified'}</p>
         
         <p>If you have any questions in the meantime, feel free to call us:</p>
-        <p>📞 08140768033 or 07056441480</p>
+        <p>📞 08140768033 or 07072413082</p>
         
         <p>Best regards,<br>PCMAC pro Team</p>
       `;
@@ -152,14 +169,8 @@ app.post('/submit-contact-form', async (req, res) => {
       <p><em>Received at: ${new Date().toLocaleString()}</em></p>
     `;
 
-    // Configure email transporter
-    const transporter = nodemailer.createTransport({
-      service: config.EMAIL_SERVICE,
-      auth: {
-        user: config.SENDER_EMAIL,
-        pass: config.SENDER_PASSWORD
-      }
-    });
+    // Create email transporter
+    const transporter = createTransporter();
 
     // Send email to repair shop
     await transporter.sendMail({
@@ -180,7 +191,7 @@ app.post('/submit-contact-form', async (req, res) => {
       <p><strong>Message:</strong> ${message.substring(0, 100)}...</p>
       
       <p>If you need immediate assistance, feel free to call us:</p>
-      <p>📞 08140768033 or 07056441480</p>
+      <p>📞 08140768033 or 07072413082</p>
       
       <p>Best regards,<br>PCMAC pro Team</p>
     `;

@@ -43,7 +43,7 @@
     submitBtn.textContent = 'Submitting...';
 
     // Send form data to backend
-    fetch('http://localhost:3000/submit-repair-request', {
+    fetch('https://pcmacpro-form-api.onrender.com/submit-repair-request', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -110,7 +110,7 @@
     submitBtn.textContent = 'Sending...';
 
     // Send form data to backend
-    fetch('http://localhost:3000/submit-contact-form', {
+    fetch('https://pcmacpro-form-api.onrender.com/submit-contact-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
