@@ -13,7 +13,7 @@ module.exports = {
   EMAIL_SERVICE: "custom", // Change to "gmail" for Gmail or "custom" for domain email
   
   // Custom SMTP Settings (for non-Gmail email providers)
-  SMTP_HOST: process.env.SMTP_HOST || "mail.pcmacpro.org", // Your domain's mail server
+  SMTP_HOST: process.env.SMTP_HOST || "pcmacpro.org", // Your domain's mail server
   SMTP_PORT: process.env.SMTP_PORT || 465, // Usually 587 (TLS) or 465 (SSL)
   SMTP_SECURE: process.env.SMTP_SECURE || true, // true for port 465, false for 587
   SMTP_USER: process.env.SMTP_USER || "contact@pcmacpro.org", // Your email address
