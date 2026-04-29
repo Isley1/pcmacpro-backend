@@ -13,7 +13,8 @@ function createTransporter() {
       host: config.SMTP_HOST,
       port: config.SMTP_PORT,
       secure: config.SMTP_SECURE,
-      user: config.SMTP_USER
+      user: config.SMTP_USER,
+      hasPassword: !!config.SMTP_PASSWORD
     });
     return nodemailer.createTransport({
       host: config.SMTP_HOST,
@@ -22,7 +23,9 @@ function createTransporter() {
       auth: {
         user: config.SMTP_USER,
         pass: config.SMTP_PASSWORD
-      }
+      },
+      debug: true,
+      logger: true
     });
   } else {
     return nodemailer.createTransport({
@@ -49,6 +52,38 @@ app.use(express.static('./'));
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'Server is running' });
+});
+
+// Test SMTP connection endpoint
+app.get('/test-smtp', async (req, res) => {
+  try {
+    const transporter = createTransporter();
+    
+    // Verify connection
+    await transporter.verify();
+    
+    res.json({ 
+      status: 'SMTP connection successful',
+      config: {
+        host: config.SMTP_HOST,
+        port: config.SMTP_PORT,
+        secure: config.SMTP_SECURE,
+        user: config.SMTP_USER
+      }
+    });
+  } catch (error) {
+    console.error('SMTP test failed:', error);
+    res.status(500).json({ 
+      status: 'SMTP connection failed',
+      error: error.message,
+      config: {
+        host: config.SMTP_HOST,
+        port: config.SMTP_PORT,
+        secure: config.SMTP_SECURE,
+        user: config.SMTP_USER
+      }
+    });
+  }
 });
 
 // Form submission endpoint
