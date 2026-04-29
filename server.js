@@ -9,6 +9,12 @@ const app = express();
 // Helper function to create email transporter based on config
 function createTransporter() {
   if (config.EMAIL_SERVICE === 'custom') {
+    console.log('Creating custom SMTP transporter with:', {
+      host: config.SMTP_HOST,
+      port: config.SMTP_PORT,
+      secure: config.SMTP_SECURE,
+      user: config.SMTP_USER
+    });
     return nodemailer.createTransport({
       host: config.SMTP_HOST,
       port: config.SMTP_PORT,
@@ -94,6 +100,8 @@ app.post('/submit-repair-request', async (req, res) => {
       subject: `New Repair Request - ${fname} ${lname}`,
       html: emailContent
     });
+
+    console.log('Repair request email sent successfully to:', config.REPAIR_EMAIL);
 
     // Optional: Send confirmation email to customer
     if (email) {
