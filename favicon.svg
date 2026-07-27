@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0a1f2e"/>
+  
+  <!-- Geometric 'AG' logo -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#1baaaa" stroke-width="2.5"/>
+  
+  <!-- 'A' -->
+  <path d="M 16 44 L 21 26 L 16 26 M 21 26 L 26 44 M 18 36 L 23 36" stroke="#1baaaa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 'G' -->
+  <path d="M 38 26 C 40.5 26 43 28.5 43 31 L 43 39 C 43 41.5 40.5 44 38 44 C 35.5 44 33 41.5 33 39 L 33 34 L 38 34" stroke="#004e89" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
